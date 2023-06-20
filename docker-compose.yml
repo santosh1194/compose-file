@@ -1,0 +1,15 @@
+version: "3"
+services:
+  httpd-service:
+    image: "httpd"
+    ports:
+      - "80:80"
+    volumes:
+      - "/mnt/webpage:/usr/local/apache2/htdocs/"
+
+  tomcat-service:
+    image: "tomcat"
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/mnt/application:/usr/local/tomcat/webapps"
